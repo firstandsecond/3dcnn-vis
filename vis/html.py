@@ -2,8 +2,8 @@ def html(layer_indices, number_of_filters, n_filters_per_row):
     """
     Generate html of specific structure for visualising gifs
     :param layer_indices: list of indices of convolution layers
-    :param number_of_filters: number of filters for each convolution layers
-    :param n_filters_per_row: number of
+    :param number_of_filters: number of filters for each convolution layer
+    :param n_filters_per_row: number of gif images per row
     :return: Content of html file for visualising gifs
     """
     n = len(layer_indices)

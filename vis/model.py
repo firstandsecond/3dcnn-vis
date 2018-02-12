@@ -4,13 +4,11 @@ from keras.layers.core import Dense, Dropout, Flatten
 
 def get_model():
     """
-    Generate 3D CNN model structure mentioned in article:
+    Generate 3D CNN resources structure mentioned in article:
     Learning spatiotemporal features with 3D convolutional networks
     Authors: Du Tran, Lubomir Bourdev, Rob Fergus, Lorenzo Torresani, Manohar Paluri
 
-    Returns:
-        Keras Sequential model of 3DCNN with specific structure
-
+    :return: Keras Sequential resources of 3DCNN with specific structure
     """
     model = Sequential()
     # 1st layer group
