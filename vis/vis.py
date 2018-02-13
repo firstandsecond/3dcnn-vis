@@ -28,9 +28,9 @@ def visualize_all_activations(model, destination_path):
 
     # getting activations for each convolutional layer
     all_activations = []
-    for l in range(0):
+    for l in range(number_of_conv_layers):
         activations = []
-        for f in range(0):
+        for f in range(number_of_filters[l]):
             # getting activation
             activation = visualize_activation(model, layer_idx=conv_layer_indices[l], filter_indices=f)
             activations.append(activation)
