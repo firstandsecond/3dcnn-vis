@@ -8,7 +8,7 @@ def get_model():
     Learning spatiotemporal features with 3D convolutional networks
     Authors: Du Tran, Lubomir Bourdev, Rob Fergus, Lorenzo Torresani, Manohar Paluri
 
-    :return: Keras Sequential resources of 3DCNN with specific structure
+    :return: Keras Sequential model with specific 3DCNN structure
     """
     model = Sequential()
     # 1st layer group
@@ -38,5 +38,4 @@ def get_model():
     model.add(Dense(4096, activation='relu', name='fc7'))
     model.add(Dropout(.5))
     model.add(Dense(487, activation='softmax', name='fc8'))
-    model.summary()
     return model
