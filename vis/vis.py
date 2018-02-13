@@ -8,7 +8,7 @@ def visualize_all_activations_3d(model, destination_path):
     Get all activations of all Conv3D layers for each filter
     Saving 3D activations in destination_path as .gif files in
     separate folders for each convolutional layer during the process
-    :param model: keras sequential model
+    :param model: keras sequential model with Conv3D layers
     :param destination_path: path where to save gifs
     :return: all activations from all layers
     """
