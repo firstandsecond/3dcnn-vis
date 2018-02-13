@@ -16,10 +16,10 @@ def html(layer_indices, number_of_filters, n_filters_per_row):
     \t<table border="5" bordercolor="blue" align="center">\n"""
     count = 0
     for l in range(n):
-        result += '\t\t<tr>\n'
-        result += '\t\t\t<th colspan="' + str(n_filters_per_row)+'">' + ' layer ' + str(layer_indices[l]) + '</th>\n'
-        result += '\t\t</tr>\n'
-        result += '\t\t<tr>\n'
+        result += """\t\t<tr>\n'
+        '\t\t\t<th colspan="' + str(n_filters_per_row)+'">' + ' layer ' + str(layer_indices[l]) + '</th>\n
+        \t\t</tr>\n
+        \t\t<tr>\n"""
         for f in range(number_of_filters[l]):
             count += 1
             result += '\t\t\t<td><img src="layer' + str(layer_indices[l]) + '/layer' + str(layer_indices[l]) + '_filter' + str(f) + '.gif" alt="" border=3 height=100 width=100></img></td>\n'
