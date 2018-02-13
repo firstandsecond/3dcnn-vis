@@ -6,7 +6,8 @@ from moviepy.editor import ImageSequenceClip
 def visualize_all_activations(model, destination_path):
     """
     Get all activations of all convolutional layers for each filter
-    Saving activations in destination_path as .gif files in process
+    Saving activations in destination_path as .gif files in
+    separate folders for each convolutional layer during the process
     :param model: keras sequential model
     :param destination_path: path where to save gifs
     :return: all activations from all layers
