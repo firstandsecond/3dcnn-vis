@@ -7,13 +7,13 @@ def html(layer_indices, number_of_filters, n_filters_per_row):
     :return: Content of html file for visualising gifs
     """
     n = len(layer_indices)
-    result = '<!DOCTYPE html>\n'
-    result += '<html>\n'
-    result += '<head>\n\t<title>3D CNN</title>\n</head>\n'
-    result += '<html>\n'
-    result += '<body>\n'
-    result += '\t<center>\n\t\t<h1>3D CNN Filters</h1>\n\t</center>\n'
-    result += '\t<table border="5" bordercolor="blue" align="center">\n'
+    result = """<!DOCTYPE html>\n'
+    <html>\n
+    <head>\n\t<title>3D CNN</title>\n</head>\n
+    <html>\n
+    <body>\n
+    \t<center>\n\t\t<h1>3D CNN Filters</h1>\n\t</center>\n
+    \t<table border="5" bordercolor="blue" align="center">\n"""
     count = 0
     for l in range(n):
         result += '\t\t<tr>\n'
