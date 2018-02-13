@@ -3,17 +3,17 @@ import keras
 from vis.visualization import get_num_filters, visualize_activation
 from moviepy.editor import ImageSequenceClip
 
-def visualize_all_activations(model, destination_path):
+def visualize_all_activations_3d(model, destination_path):
     """
-    Get all activations of all convolutional layers for each filter
-    Saving activations in destination_path as .gif files in
+    Get all activations of all Conv3D layers for each filter
+    Saving 3D activations in destination_path as .gif files in
     separate folders for each convolutional layer during the process
     :param model: keras sequential model
     :param destination_path: path where to save gifs
     :return: all activations from all layers
     """
 
-    # get indices of all convolutional layers
+    # getting indices of all convolutional layers
     conv_layer_indices = []
     number_of_layers = len(model.layers)
     for i in range(number_of_layers):
@@ -32,7 +32,7 @@ def visualize_all_activations(model, destination_path):
     all_activations = []
     for l in range(number_of_conv_layers):
       gif_folder = destination_path + "/" + model.layers[conv_layer_indices[l]].name + "/"
-      #created directory for each layer
+      #created directory for each convolutional layer
       if not os.path.exists(gif_folder):
         os.makedirs(gif_folder)
         activations = []
