@@ -31,6 +31,7 @@ def visualize_all_activations(model, destination_path):
     all_activations = []
     for l in range(number_of_conv_layers):
       gif_folder = destination_path + "/" + model.layers[conv_layer_indices[l]].name + "/"
+      #created directory for each layer
       if not os.path.exists(gif_folder):
         os.makedirs(gif_folder)
         activations = []
