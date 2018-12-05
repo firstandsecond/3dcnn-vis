@@ -4,6 +4,7 @@ from vis.visualization import get_num_filters, visualize_activation
 from moviepy.editor import ImageSequenceClip
 
 def visualize_all_activations_3d(model, destination_path):
+    
     """
     Get all activations of all Conv3D layers for each filter
     Saving 3D activations in destination_path as .gif files in
